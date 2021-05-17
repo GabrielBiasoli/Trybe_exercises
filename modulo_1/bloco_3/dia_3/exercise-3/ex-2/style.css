@@ -1,0 +1,53 @@
+
+
+div:hover{
+  border: 2px solid #111;
+}
+
+div:first-of-type {
+  background-color: rgb(209, 252, 19);
+  color: red;
+  font-size: 1em;
+  font-style: italic;
+}
+
+div:nth-child(6n) {
+  background-color: rgb(255, 167, 226);
+  color: rgb(162, 0, 255);
+  font-size: 1em;
+  font-style: normal;
+
+}
+
+div:first-child {
+  background-color: rgb(253, 195, 4);
+  color: green;
+  font-size: 1em;
+  font-style: italic;
+
+}
+
+div:last-of-type{
+  background-color: rgb(190, 202, 202);
+  color: rgb(255, 0, 0);
+  font-size: 1em;
+  font-style: italic;
+
+}
+
+div:nth-last-of-type(4n) {
+  font-style: normal;
+  font-size: 1em;
+  background-color: rgb(198, 135, 235);
+  color: rgb(6, 184, 255);
+}
+
+div{
+  font-size: 40px;
+  background-color: rgb(162, 0, 255);
+  color: rgb(238, 255, 0);
+  font-style: italic;
+}
+
+
+

@@ -1,0 +1,18 @@
+
+
+h1, p{
+  text-align: center;
+}
+
+li:hover{
+  background-color: aqua;
+  cursor: unset;
+}
+
+li:active{
+  color :yellow;
+}
+
+li{
+  list-style: none;
+}
