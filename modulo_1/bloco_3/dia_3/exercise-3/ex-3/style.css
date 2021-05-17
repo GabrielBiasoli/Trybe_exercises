@@ -44,6 +44,15 @@ li em{
 ul li a:hover{
   font-weight: bold;
   color: rgb(9, 255, 0);
+  background-color: orange;
+}
+
+ul li a{
+  text-decoration: none;
+  border-radius: 2%;
+  display: block;
+  text-align: center;
+  background-color: rgb(241, 120, 235);
 }
 
 /*
