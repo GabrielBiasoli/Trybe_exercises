@@ -1,11 +1,15 @@
-let x = 90;
-let y = 31;
-let z = 60;
+let x = 0;
+let y = 90;
+let z = 90;
 let result = true;
 
-if (x + y + z == 180) {
-  console.log(result);
+if (x <= 0 || y <= 0 || z <= 0) {
+  console.log("ângulo inválido");
 } else {
-  result = false;
-  console.log(result);
+  if (x + y + z == 180) {
+    console.log(result);
+  } else {
+    result = false;
+    console.log(result);
+  }
 }
