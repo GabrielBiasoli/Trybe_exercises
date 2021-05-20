@@ -1,15 +1,15 @@
 let numbers = [5, 9, 3, 19, 70, 8, 100, 2, 35, 27];
 let x = 0;
 
-for (let indexFirst = 0; indexFirst < numbers.length; indexFirst += 1) {
+for (let firstIndex = 0; firstIndex < numbers.length; firstIndex += 1) {
 
-  if (x < numbers[indexFirst]) {
-    x = numbers[indexFirst];
+  if (x < numbers[firstIndex]) {
+    x = numbers[firstIndex];
   }
-  for (let indexSecond = 0; indexSecond < numbers.length; indexSecond += 1) {
+  for (let secondIndex = 0; secondIndex < numbers.length; secondIndex += 1) {
 
-    if (x > numbers[indexSecond]) {
-      x = numbers[indexSecond];
+    if (x > numbers[secondIndex]) {
+      x = numbers[secondIndex];
     }
 
   }
