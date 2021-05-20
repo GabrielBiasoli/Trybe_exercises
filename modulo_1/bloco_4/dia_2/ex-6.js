@@ -8,7 +8,7 @@ for (let index = 0; index < numbers.length; index += 1) {
   }
 }
 if (x > 0) {
-  console.log(x);
+  console.log("Existem", x, "valores ímpares");
 } else {
   console.log("nenhum valor ímpar encontrado");
 }
