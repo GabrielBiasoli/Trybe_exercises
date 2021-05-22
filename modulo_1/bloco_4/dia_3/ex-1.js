@@ -1,4 +1,4 @@
-let n = 7;
+let n = 2;
 let asteriscos = "";
 
 for (let secondI = 0; secondI < n; secondI += 1) {
