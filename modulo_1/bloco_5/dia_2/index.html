@@ -114,6 +114,32 @@
       const element = document.createElement('h3');
       divMainContent.appendChild(element);
     }
+
+    //Pt 2
+    //Ex 1
+    childBodyH1.className = 'title';
+
+    //Ex 2
+    let h3Array = document.querySelectorAll('h3');
+    for (let i = 0; i < h3Array.length; i += 1) {
+      const element = h3Array[i];
+      element.className = 'description';
+    }
+
+    //Ex 3
+    divMainContent.removeChild(divLeft);
+
+    //Ex 4
+    divRight.style.marginRight = 'auto';
+
+    //Ex 5
+    divCenterContent.parentElement.style.backgroundColor = 'green';
+
+    //Ex 6
+    for (let i = 0; i < 2; i += 1) {
+      const element = unordList.lastElementChild;
+      unordList.removeChild(element);
+    }
   </script>
 </body>
 
