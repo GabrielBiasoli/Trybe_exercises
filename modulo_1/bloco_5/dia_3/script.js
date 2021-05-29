@@ -51,9 +51,10 @@ function changeClassColor(className, color, bgColor) {
   }
 }
 function holidays() {
+
   let buttonHoliday = document.getElementById('btn-holiday');
   let holidayColorCheck = document.getElementsByClassName('holiday')[0];
-  console.log(holidayColorCheck);
+
   buttonHoliday.addEventListener('click', function () {
     if (holidayColorCheck.style.backgroundColor === 'rgb(242, 53, 53)') {
       changeClassColor('holiday', '#777', '#EEE');
@@ -75,3 +76,22 @@ fridayButton('Sexta-feira')
 
 
 //Ex 5
+
+function sextou() {
+  let buttonFriday = document.getElementById('btn-friday');
+  let fridayElements = document.getElementsByClassName('friday');
+  let fridays = [4, 11, 18, 25];
+
+  buttonFriday.addEventListener('click', function () {
+
+    for (let i = 0; i < fridayElements.length; i++) {
+      let element = fridayElements[i];
+      if (element.innerHTML === 'Sextou \o/') {
+        element.innerHTML = fridays[i]
+      } else {
+        element.innerHTML = 'Sextou \o/';
+      }
+    }
+  })
+}
+sextou();
