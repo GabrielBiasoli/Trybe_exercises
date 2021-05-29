@@ -33,13 +33,41 @@ for (const iterator of dezDaysList) {
 }
 
 //Ex 2
-function holidays(Feriados) {
+function holidayButton(Feriados) {
   let buttonsContainer = document.getElementsByClassName('buttons-container')[0];
   let button = document.createElement('button');
   button.innerHTML = Feriados;
   button.setAttribute('id', 'btn-holiday')
   buttonsContainer.appendChild(button);
 }
-holidays('Feriados')
+holidayButton('Feriados')
 
 //Ex 3
+function changeClassColor(className, color, bgColor) {
+  let element = document.getElementsByClassName(className);
+  for (const iterator of element) {
+    iterator.style.color = color;
+    iterator.style.backgroundColor = bgColor;
+  }
+}
+
+function holidays() {
+  let buttonHoliday = document.getElementById('btn-holiday');
+  let holidayColorCheck = document.getElementsByClassName('holiday')[0];
+  console.log(holidayColorCheck);
+  buttonHoliday.addEventListener('click', function () {
+
+    if (holidayColorCheck.style.backgroundColor === 'rgb(242, 53, 53)') {
+      changeClassColor('holiday', '#777', '#EEE');
+    } else {
+      changeClassColor('holiday', 'black', 'rgb(242, 53, 53)');
+    }
+
+  })
+
+}
+
+
+holidays();
+
+
