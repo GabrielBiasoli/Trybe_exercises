@@ -76,7 +76,6 @@ fridayButton('Sexta-feira')
 
 
 //Ex 5
-
 function sextou() {
   let buttonFriday = document.getElementById('btn-friday');
   let fridayElements = document.getElementsByClassName('friday');
@@ -84,7 +83,7 @@ function sextou() {
 
   buttonFriday.addEventListener('click', function () {
 
-    for (let i = 0; i < fridayElements.length; i++) {
+    for (let i = 0; i < fridayElements.length; i += 1) {
       let element = fridayElements[i];
       if (element.innerHTML === 'Sextou \o/') {
         element.innerHTML = fridays[i]
@@ -95,3 +94,26 @@ function sextou() {
   })
 }
 sextou();
+
+//Ex 6
+function zoomInDays() {
+  let days = document.getElementsByClassName('day');
+
+  for (let element of days) {
+    element.addEventListener('mouseover', function () {
+      element.style.fontSize = '40px';
+    })
+  }
+}
+
+function zoomOutDays() {
+  let days = document.getElementsByClassName('day');
+
+  for (let element of days) {
+    element.addEventListener('mouseleave', function () {
+      element.style.fontSize = '20px';
+    })
+  }
+}
+zoomInDays();
+zoomOutDays();
