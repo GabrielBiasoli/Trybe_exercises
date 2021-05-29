@@ -33,3 +33,13 @@ for (const iterator of dezDaysList) {
 }
 
 //Ex 2
+function holidays(Feriados) {
+  let buttonsContainer = document.getElementsByClassName('buttons-container')[0];
+  let button = document.createElement('button');
+  button.innerHTML = Feriados;
+  button.setAttribute('id', 'btn-holiday')
+  buttonsContainer.appendChild(button);
+}
+holidays('Feriados')
+
+//Ex 3
