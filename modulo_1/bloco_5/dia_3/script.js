@@ -117,3 +117,13 @@ function zoomOutDays() {
 }
 zoomInDays();
 zoomOutDays();
+
+//Ex 7
+function taskCreate(taskName) {
+
+  let spanTag = document.createElement('span');
+  let myTasks = document.getElementsByClassName('my-tasks')[0];
+  spanTag.innerHTML = taskName;
+  myTasks.appendChild(spanTag);
+}
+taskCreate('Projeto');
