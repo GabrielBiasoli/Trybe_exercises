@@ -162,3 +162,20 @@ selectColor();
 
 
 //Ex 10
+function colorDays() {
+  let divColor = document.getElementsByClassName('task')[0];
+  let days = document.getElementsByClassName('day');
+
+
+  for (let element of days) {
+    element.style.cursor = 'pointer'
+    element.addEventListener('click', function () {
+      if (divColor.className === 'task selected') {
+        element.style.color = divColor.style.backgroundColor;
+      } else if (element.style.color === divColor.style.backgroundColor) {
+        element.style.color = 'rgb(119, 119, 119)';
+      }
+    })
+  }
+}
+colorDays();
