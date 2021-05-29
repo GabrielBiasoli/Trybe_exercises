@@ -32,6 +32,7 @@ for (const iterator of dezDaysList) {
   Alldays.appendChild(element);
 }
 
+
 //Ex 2
 let buttonsContainer = document.getElementsByClassName('buttons-container')[0];
 function holidayButton(Feriados) {
@@ -41,6 +42,7 @@ function holidayButton(Feriados) {
   buttonsContainer.appendChild(button);
 }
 holidayButton('Feriados')
+
 
 //Ex 3
 function changeClassColor(className, color, bgColor) {
@@ -64,6 +66,7 @@ function holidays() {
   })
 }
 holidays();
+
 
 //Ex 4
 function fridayButton(sexta) {
@@ -95,6 +98,7 @@ function sextou() {
 }
 sextou();
 
+
 //Ex 6
 function zoomInDays() {
   let days = document.getElementsByClassName('day');
@@ -118,6 +122,7 @@ function zoomOutDays() {
 zoomInDays();
 zoomOutDays();
 
+
 //Ex 7
 function taskCreate(taskName) {
 
@@ -127,3 +132,33 @@ function taskCreate(taskName) {
   myTasks.appendChild(spanTag);
 }
 taskCreate('Projeto');
+
+
+//Ex 8
+function colorCreate(color) {
+  let divColor = document.createElement('div');
+  let myTasks = document.getElementsByClassName('my-tasks')[0];
+  divColor.classList.add('task');
+  divColor.style.backgroundColor = color;
+  myTasks.appendChild(divColor);
+
+}
+colorCreate('green');
+
+
+//Ex 9
+function selectColor() {
+  let divColor = document.getElementsByClassName('task')[0];
+  divColor.style.cursor = "pointer";
+  divColor.addEventListener('click', function () {
+    if (divColor.className === 'task selected') {
+      divColor.classList.remove('selected');
+    } else {
+      divColor.classList.add('selected')
+    }
+  })
+}
+selectColor();
+
+
+//Ex 10
