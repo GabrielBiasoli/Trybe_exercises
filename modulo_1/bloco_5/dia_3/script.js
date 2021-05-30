@@ -166,16 +166,48 @@ function colorDays() {
   let divColor = document.getElementsByClassName('task')[0];
   let days = document.getElementsByClassName('day');
 
-
   for (let element of days) {
-    element.style.cursor = 'pointer'
-    element.addEventListener('click', function () {
+    element.style.cursor = 'pointer';
+    element.addEventListener('click', function (event) {
       if (divColor.className === 'task selected') {
-        element.style.color = divColor.style.backgroundColor;
-      } else if (element.style.color === divColor.style.backgroundColor) {
-        element.style.color = 'rgb(119, 119, 119)';
+        if (event.target.style.color !== 'green') {
+          element.style.color = divColor.style.backgroundColor;
+        } else if (event.target.style.color === 'green') {
+          element.style.color = 'rgb(119, 119, 119)';
+        }
       }
     })
   }
 }
 colorDays();
+
+
+//Bônus
+function addAppointment() {
+  let inputText = document.getElementById('task-input');
+  let btnInput = document.getElementById('btn-add');
+  let appointments = document.getElementsByClassName('input-container')[0];
+
+  function createInput() {
+    newAppointment = document.createElement('h1');
+    newAppointment.innerHTML = inputText.value;
+    newAppointment.classList.add('appointments');
+    appointments.appendChild(newAppointment);
+    if (newAppointment.innerHTML === '') {
+      alert('Erro')
+    }
+  }
+
+  btnInput.addEventListener('click', function () {
+    createInput();
+  });
+
+  inputText.addEventListener('keyup', function (event) {
+    if (event.keyCode === 13) {
+      createInput();
+    }
+  })
+
+
+}
+addAppointment();

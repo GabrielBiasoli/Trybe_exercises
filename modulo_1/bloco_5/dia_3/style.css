@@ -3,6 +3,12 @@
   margin: 0;
 }
 
+.appointments{
+  text-align: center;
+  color: #666;
+  margin-top: 15px;
+}
+
 body {
   font-family: Verdana, Geneva, Tahoma, sans-serif;
   background-color: #eee;
