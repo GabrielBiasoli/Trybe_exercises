@@ -194,7 +194,7 @@ function addAppointment() {
     newAppointment.classList.add('appointments');
     appointments.appendChild(newAppointment);
     if (newAppointment.innerHTML === '') {
-      alert('Erro')
+      alert('Erro: Digite novamente')
     }
   }
 
