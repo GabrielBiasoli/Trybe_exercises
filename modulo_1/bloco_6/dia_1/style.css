@@ -1,0 +1,14 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.fields {
+  padding: 20px;
+  margin: 30px;
+}
+
+.fields  div{
+  margin: 20px;
+}
