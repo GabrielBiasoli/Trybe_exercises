@@ -1,0 +1,51 @@
+body {
+  font-size: 35px;
+  margin: 6%;
+}
+
+h1 {
+  font-size: 3em ;
+}
+
+h2 {
+
+}
+
+img {
+    max-width: 100%;
+}
+
+figure {
+    margin: 90px 0;
+}
+
+@media screen and (min-width: 840px) {
+
+  body {
+    background-color: aliceblue;
+    font-size: 40px;
+    margin: 9%;
+  }
+
+  .flex-container {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+  }
+
+  div.flex-container figure {
+    max-width: 300px
+  };
+
+}
+
+@media screen and (min-width: 1250px) {
+
+  body {
+    background-color: aquamarine;
+    font-size: 38px;
+    margin: 11% auto;
+    max-width: 700px;
+  }
+
+}
