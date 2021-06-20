@@ -28,27 +28,27 @@ firstFunction(lesson2, 'turno', 'manhã');
 const secondFunction = object => {
  console.log(`${Object.keys(object)}`);
 }
-// secondFunction(lesson3);
+secondFunction(lesson3);
 
 //Ex 3
 const thirdFunction = object => {
   const arrayKeys = Object.keys(object);
   console.log(`O objeto tem um tamanho de ${arrayKeys.length} chaves`);
 }
-// thirdFunction(lesson3);
+thirdFunction(lesson3);
 
 //Ex 4
 const fourthFunction = object => {
   console.log(`${Object.values(object)}`);
 }
-// fourthFunction(lesson3);
+fourthFunction(lesson3);
 
 //Ex 5
 const allLessons = {}
 allLessons.lesson1 = Object.assign({}, lesson1);
 allLessons.lesson2 = Object.assign({}, lesson2);
 allLessons.lesson3 = Object.assign({}, lesson3);
-// console.log(allLessons);
+console.log(allLessons);
 
 //Ex 6
 const sixthFunction = (object) => {
@@ -67,10 +67,41 @@ const seventhFunction = (object, n) => {
 seventhFunction(lesson1, 0);
 
 //Ex 8
-const eighth = (object, key, value) => {
+const eighthFunction = (object, key, value) => {
   let result = false;
   Object.keys(object).includes(key) ? result = true : result = false;
   Object.values(object).includes(value) ? result = true : result = false;
   return console.log(result);
 }
-eighth(lesson2, 'turno', 'noite')
+eighthFunction(lesson2, 'turno', 'noite');
+
+// Parte 1 - bônus
+const firstBonusFunction = (object) => {
+  let sumOfStudents = 0;
+    for (const key in object) {
+      Object.values(object[key]).includes('Matemática') ? sumOfStudents += object[key].numeroEstudantes : sumOfStudents += 0;      
+  }
+  return console.log(`${sumOfStudents} estudantes assistiram às aulas de Matemática`);
+}
+firstBonusFunction(allLessons);
+
+// Parte 2 - bônus
+const secondBonusFunction = (object, name) => {
+  const report = {};
+  const classes = [];
+  let students = 0;
+  for (const key in object) {
+   if (object[key].professor.includes(name)) {
+    report.professor = name;
+    classes.push(object[key].materia);
+    students += object[key].numeroEstudantes;
+    }
+  }
+  report.aulas = classes
+  report.estudantes = students;
+    return console.log(report);
+  
+
+  }
+
+secondBonusFunction(allLessons, 'Maria Clara')
