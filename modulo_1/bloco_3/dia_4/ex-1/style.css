@@ -1,0 +1,82 @@
+*{
+  padding: 0;
+  margin: 0;
+}
+
+
+
+.header{
+  background-color: aquamarine;
+  height: 100px;
+}
+
+.header h1{
+  font-size: 50px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+
+
+.nav{
+  text-align: center;
+  background-color: brown;
+  padding: 15px;
+}
+
+.nav ul li{
+  display: inline;
+  padding: 10px;
+  background-color: green;
+}
+
+.nav ul a{
+  text-decoration: none;
+  color: red;
+}
+
+
+
+.main{
+  max-width: 550px;
+  margin: 0 auto;
+}
+
+
+
+
+.list-group{
+  margin: 0 auto;
+  max-width: 320px;
+}
+
+.list-group ul{
+  text-align: left;
+  display: inline-block;
+  list-style: none;
+}
+
+.list-group ul li{
+  margin: 2px 0 0 5px;
+}
+
+.list-group ul:nth-child(2){
+  border-left: 2px solid black;
+}
+
+.list-container{
+  border: 2px solid black;
+}
+
+
+
+
+.title{
+  font-size: 40px;
+  text-align: center;
+}
+
+
+.text-sections{
+  text-align: justify ;
+}
+
